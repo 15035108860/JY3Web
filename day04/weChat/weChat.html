@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,intital-scale=1.0,user-scalable=0" />
+		<title>weChat</title>
+		<style>
+			*{
+				margin: 0px;
+			}
+			#contain{
+				position: absolute;
+				bottom: 10px;
+				/*background-color: darkgray;*/
+			}
+			.foot{
+				width: 25%;
+				height: 70px;
+				/*border: 1px solid red;*/		
+				line-height: 35px;
+				text-align: center;
+				float: left;				
+			}
+			#message{
+				position: relative;
+			}
+			.mes{
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;
+				background-color: red;
+				position: absolute;
+				/*right: 0%;*/
+				left: 53px;
+				top: -4px;
+			}
+			.mes span{
+				color: white;
+				font-size: 8px;
+				position: absolute;
+				left: 4px;
+				top: -8px;
+			}
+		</style>
+	</head>
+		<div id="contain">
+			<div id="message" class="foot">
+				<div class="mes">
+					<span>20</span>
+				</div>
+				<img src="../img/WeChat.svg" width="50%" height="50%"/><br />
+				<span><b>微信</b></span>
+			</div>
+			<div id="phone" class="foot">
+				<img src="../img/通讯录.svg" width="50%" height="50%"/><br />
+				<span><b>通讯录</b></span>
+			</div>
+			<div id="find" class="foot">
+				<img src="../img/发现.svg" width="50%" height="50%"/><br />
+				<span><b>发现</b></span>
+			</div>
+			<div id="self" class="foot">
+				<img src="../img/个人.svg" width="50%" height="50%"/><br />
+				<span><b>个人</b></span>
+			</div>		
+		</div>
+	<body>
+	</body>
+</html>

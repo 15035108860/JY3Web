@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>哆啦A梦</title>
+		<style>
+			body{
+				background-color: lightblue;
+				margin: 0;
+			}
+			.contain{
+				
+				position: relative;
+				top: 50px;
+				left: 568px;				
+			}
+			/*头*/
+			.head{
+				width: 400px;
+				height: 350px;
+				border-radius: 50% 50% 25% 25% / 55% 55% 45% 45%;
+				background: #008ee3;
+				border: 2px solid #000;
+			}
+			/*脸*/
+			.face{
+				width: 310px;
+				height: 260px;
+				background: snow;
+				border-radius: 50% 50% 25% 25% / 55% 55% 45% 45%;
+				position: relative;
+				top: 90px;
+				left: 45px;
+			}
+			/*左眼眶*/
+			.face>div:first-child{
+				width: 80px;
+				height: 100px;
+				border-radius: 50%;
+				border:2px #000 solid;
+				background: snow;
+				position: absolute;
+				top:-40px;
+				left: 71px;
+			}
+			/*右眼眶*/
+			.face>div:last-child{
+				width: 80px;
+				height: 100px;
+				border-radius: 50%;
+				border:2px #000 solid;
+				background-color: snow;
+				position: absolute;
+				top:-40px;
+				left: 154px;
+			}
+			/*左眼珠*/
+			.face>div:first-child div{
+				width: 20px;
+				height: 25px;
+				background: #000;
+				border-radius: 50%;
+				position: absolute;
+				top: 45px;
+				left: 60px;
+			}
+			/*有眼珠*/
+			.face>div:last-child div{
+				width: 20px;
+				height: 25px;
+				background: #000;
+				border-radius: 50%;
+				position: absolute;
+				top: 45px;
+			}
+			/*左眼仁*/
+			.face>div:first-child div div{
+				width: 10px;
+				height: 10px;
+				background: #ffffff;
+				border-radius: 50%;
+				position: absolute;
+				top: 7px;
+				left: 10px;
+			}
+			/*右眼仁*/
+			.face>div:last-child div div{
+				width: 10px;
+				height: 10px;
+				background: #ffffff;
+				border-radius: 50%;
+				position: absolute;
+				top: 7px;
+				left: 0px;
+			}
+			/*鼻子*/
+			.nose{
+				width: 30px;
+				height: 30px;
+				border-radius: 50%;
+				background: #c70000;
+				position: absolute;
+				top: 130px;
+				left: 185px;
+			}
+			/*鼻尖*/
+			.nose div{
+				width: 10px;
+				height: 10px;
+				border-radius: 50%;
+				background: snow;
+				position: absolute;
+				top: 30%;
+				left: 65%;
+			}
+			/*鼻子下面的线*/
+			.nose1{
+				width: 2px;
+				height: 130px;
+				background-color: black;
+				position: absolute;
+				top: 160px;
+				left: 200px;
+			}
+			/*嘴*/
+			.mouth{
+				width: 200px;
+				height: 90px;
+				border-radius: 0 0 90px 90px;
+				background: red;
+				position: absolute;
+				top: 260px;
+				left: 105px;
+			}
+			.neck{
+				width: 320px;
+				height: 20px;
+				border-radius: 50% 50% 20% 20% / 50% 50% 50% 50%;
+				background: #e30000;
+				margin: 80px ;
+				position: absolute;
+				top: 260px;
+				left: -35px;
+			}
+			/*铃铛*/
+			.neck div:first-child{
+				border: 2px #000 solid;
+				border-radius: 50%;
+				width: 40px;
+				height: 40px;
+				background: #ffdd2e;
+				position: absolute;
+				top: 10px;
+				left: 48%;
+				margin-left: -22px;
+				transition: all 1s;
+			}
+			.neck div:nth-child(2){
+				border: 2px #000 solid;
+				width: 44px;
+				height: 5px;
+				background: #ffdd2e;
+				position: absolute;
+				left: 48%;
+				margin-left: -24px;
+				top: 23px;
+				border-radius: 5px;
+				transition: all 1s;
+			}
+			.neck div:nth-child(3){
+				width: 8px;
+				height: 8px;
+				border: 2px #000 solid;
+				position: absolute;
+				background: #6c5844;
+				border-radius: 50%;
+				left: 48%;
+				margin-left: -6px;
+				top: 35px;
+			}
+			.neck div:nth-child(4){
+				width: 2px;
+				height: 8px;
+				background: #000;
+				position: absolute;
+				left: 48%;
+				margin-left: -1px;
+				top: 45px;
+				transition: all 1s;
+			}
+			.beard .left div:first-child{
+				width: 120px;
+				height: 40px;
+				border-top: 2px #000 solid;
+				border-radius: 10% 90% 10% 90% / 10% 90% 10% 90%;
+				position: absolute;
+				left: 200px;
+				top: 140px;
+				margin-left: -170px;
+				z-index: 100;
+			}
+			.beard .left div:nth-child(2){
+				width: 120px;
+				height: 40px;
+				border-top: 2px #000 solid;
+				border-radius: 10% 90% 10% 90% / 30% 70% 40% 60%;
+				position: absolute;
+				left: 200px;
+				top: 170px;
+				margin-left: -170px;
+				z-index: 100;
+			}
+			.beard .left div:last-child{
+				width: 120px;
+				height: 40px;
+				border-top: 2px #000 solid;
+				border-radius: 10% 90% 10% 90% / 40% 60% 10% 90%;
+				position: absolute;
+				left: 200px;
+				top: 200px;
+				margin-left: -170px;
+				z-index: 100;
+			}
+		
+			.beard .right div:first-child{
+				width: 120px;
+				height: 40px;
+				border-top: 2px #000 solid;
+				border-radius: 90% 10% 90% 10% / 90% 10% 90% 10%;
+				position: absolute;
+				left: 200px;
+				top: 140px;
+				margin-left: 50px;
+				z-index: 100;
+			}
+			.beard .right div:nth-child(2){
+				width: 120px;
+				height: 40px;
+				border-top: 2px #000 solid;
+				border-radius: 90% 10% 90% 10% / 70% 30% 60% 40%;
+				position: absolute;
+				left: 200px;
+				top: 170px;
+				margin-left: 50px;
+				z-index: 100;
+			}
+			.beard .right div:last-child{
+				width: 120px;
+				height: 40px;
+				border-top: 2px #000 solid;
+				border-radius: 90% 10% 90% 10% / 60% 40% 90% 10%;
+				position: absolute;
+				left: 200px;
+				top: 200px;
+				margin-left: 50px;
+				z-index: 100;
+			}
+			.body{
+				border: 2px solid #000;
+				width: 350px;
+				height: 350px;
+				border-radius: 50% 50% 25% 25% / 55% 55% 45% 45%;
+				background: #008ee3;
+				position: absolute;
+				left: 30px;
+				top: 280px;
+				z-index: -1;
+			}
+			.body>div{
+				width: 310px;
+				height: 260px;
+				background: snow;
+				border-radius: 50% 50% 25% 25% / 55% 55% 45% 45%;
+				position: relative;
+				top: 90px;
+				left: 20px;
+			}
+			.body>div div{
+				border: 2px solid #000;
+				width: 200px;
+				height: 100px;
+				border-radius: 0 0 100px 100px;
+				border: 2px solid black;
+				background: snow;
+				position: absolute;
+				top: 100px;
+				left: 55px;
+			}
+			.lefthand{
+				width: 60px;
+				height: 60px;
+				border-radius: 50%;
+				border: 2px solid black;
+				background: snow;
+				position: absolute;
+				top: 450px;
+				left: -20px;
+				z-index: -2;
+			}
+			#divlefthand{
+				border: 2px solid #000;
+				width: 200px;
+				height: 150px;
+				border-radius: 50% 50% 25% 25% / 50% 55% 45% 45%;
+				background: #008ee3;
+				position: absolute;
+				left: 10px;
+				top: 350px;
+				z-index: -3;
+			}
+			.righthand{
+				width: 60px;
+				height: 60px;
+				border-radius: 50%;
+				border: 2px solid black;
+				background: snow;
+				position: absolute;
+				top: 450px;
+				left: 370px;
+				z-index: -2;
+			}
+			#divrighthand{
+				border: 2px solid #000;
+				width: 200px;
+				height: 150px;
+				border-radius: 50% 50% 25% 25% / 55% 50% 45% 45%;
+				background: #008ee3;
+				position: absolute;
+				left: 200px;
+				top: 350px;
+				z-index: -3;
+			}
+			.foot{
+				width: 400px;
+    			height: 40px;
+    			border: 2px solid #000;
+    			background-color: snow;
+    			border-radius: 30% 30% 30% 30% / 150% 150% 150% 150%;
+    			position: absolute;
+    			top: 630px;
+				left: 10px;
+				z-index: -3;
+		    }
+		    .foot1{
+		    	width: 2px;
+				height: 60px;
+				background-color: black;
+				position: absolute;
+				top: 610px;
+				left: 200px;
+		    }
+		    .foot2{
+		    	width: 30px;
+				height: 2px;
+				background-color: black;
+				position: absolute;
+				top: 610px;
+				left: 185px;
+		    }
+		</style>
+	</head>
+	<body>
+		<div class="contain">
+			<!--头部-->
+			<div class="head">
+				<div class="face">
+					<!--/*左眼眶*/-->
+					<div>
+						<!--/*左眼珠1*/-->
+						<div>
+							<!--/*左瞳孔*/-->
+							<div></div>
+						</div>
+					</div>
+					<!--/*右眼眶*/-->
+					<div>
+						<!--/*右眼珠*/-->
+						<div>
+							<!--/*右瞳孔*/-->
+							<div></div>
+						</div>
+					</div>
+				</div>
+				<!--鼻子-->
+				<div class="nose">
+					<div></div>
+				</div>
+				<div class="nose1">
+					
+				</div>
+			</div>
+			<!--嘴-->
+			<div class="mouth">
+			</div>
+			<!--铃铛-->
+			<div class="neck">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<!--胡须-->
+			<div class="beard">
+				<div class="left">
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+				<div class="right">
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+				<span></span>
+			</div>
+			<!--身体-->
+			<div class="body">
+				<!--肚子-->
+				<div>
+					<!--口袋-->
+					<div></div>
+				</div>
+			</div>
+			<div class="lefthand"></div>
+			<div id="divlefthand"></div>
+			<div class="righthand"></div>
+			<div id="divrighthand"></div>
+			<div class="foot"></div>
+			<div class="foot1"></div>
+			<div class="foot2"></div>
+		</div>
+	</body>
+</html>

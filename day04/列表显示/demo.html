@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>鼠标移动显示隐藏列表</title>
+		<style>
+			div{
+				float: left;
+			}
+			#categroy{
+				width: 190px;
+				height: 480px;
+				background-color: lightblue;
+			}
+			#content{
+				height: 480px;
+				width: 998px;
+				background-color: yellow;
+				/*隐藏不会占位置*/
+				display: none;
+				/*隐藏但还是会占位置*/
+				/*visibility: hidden;*/
+			}
+			ul{
+				list-style: none;
+			}
+			a{
+				text-decoration: none;
+				color: black;
+			}
+			#categroy:hover+#content{
+				display: block;
+			}
+			#content:hover{
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="categroy">
+			<ul>
+				<li><a href="#">家用电器</a></li>
+				<li><a href="#">手机</a></li>
+				<li><a href="#">电脑</a></li>
+				<li><a href="#">笔记本</a></li>
+				<li><a href="#">生活用品</a></li>
+			</ul>
+		</div>
+		<div id="content"></div>
+	</body>
+</html>

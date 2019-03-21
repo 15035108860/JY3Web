@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>音乐CD</title>
+		<style>
+			@-webkit-keyframes work3{
+				from{
+					width: 200px;
+					height: 200px;
+					border-radius: 50%;
+					background-color: red;
+				}
+				to{
+					width: 200px;
+					height: 200px;
+					border-radius: 50%;
+					background-color: red;
+					transform: rotate(360deg);
+				}
+			}
+			#cotainer{
+				width: 300px;
+				height: 300px;
+				border-radius: 50%;
+				background-color: black;
+				position: relative;
+			}
+			#sunDiv{
+				-webkit-animation: work3 5s infinite linear;
+				position: absolute;
+				left: 17%;
+				top: 18%;
+			}
+			/*#world{
+					
+				border-radius: 10px;			
+				color: white;
+				font-size: 20px;
+				padding: 10px;
+				font-weight: bold;
+				position: absolute;
+				left: 22px;
+				top: 25px;
+			}*/
+		</style>
+	</head>
+	<body>
+		<div id="cotainer">
+			<div id="sunDiv">
+				<div id="world">
+					<img src="../img/许嵩.jpg" width="200px" height="200px" style="border-radius: 50%;"/>
+					<!--<span style="font-size: 30px;">音乐</span>-->
+				</div>				
+			</div>
+		</div>
+	</body>
+</html>

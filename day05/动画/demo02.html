@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>跑马灯</title>
+		<style>
+			@-webkit-keyframes twoAction{
+				0%{
+					width: 100px;
+					height: 100px;
+					background-color: red;
+					left: 0px;
+					top: 0px;
+				}
+				25%{
+					width: 100px;
+					height: 100px;
+					background-color: blue;
+					left: 200px;
+					top: 0px;
+				}
+				50%{
+					width: 100px;
+					height: 100px;
+					background-color: greenyellow;
+					left: 200px;
+					top:200px;
+				}
+				75%{
+					width: 100px;
+					height: 100px;
+					background-color: yellow;
+					left: 0px;
+					top: 200px;
+				}
+				100%{
+					width: 100px;
+					height: 100px;
+					background-color: lightblue;
+					left: 0px;
+					top: 0px;
+				}
+			}
+			#cotainer{
+				position: relative;
+				/*属性顺序 name 完成所需时间 方式 延迟时间 播放次数(循环) 是否反向*/
+				-webkit-animation: twoAction 2s linear 2s infinite alternate;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="cotainer"></div>
+	</body>
+</html>

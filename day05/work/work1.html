@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>动画跳转</title>
+		<style>
+			@-webkit-keyframes work1{
+				0%{
+					width: 96px;
+					height: 67px;
+					background-color: #92B901;
+					border-radius: 10px;
+					left: 0px;	
+				}
+				10%{
+					width: 96px;
+					height: 67px;
+					background-color: #92B901;
+					border-radius: 10px;
+					left: 0px;	
+					transform: rotate(45deg);
+				}
+				50%{
+					width: 96px;
+					height: 67px;
+					background-color:lightblue;
+					left: 500px;
+					border-radius: 10px;
+					transform: rotate(0deg);
+				}
+				100%{
+					width: 96px;
+					height: 67px;
+					border-radius: 10px;
+					background-color: #92B901;
+					left: 0px;
+					transform: rotate(-360deg);
+				}
+			}
+			#cotainer{
+				position: relative;
+				
+				-webkit-animation: work1 6s 1s infinite;
+			}
+			#world{
+				width: 76px;
+				height: 47px;	
+				border-radius: 10px;			
+				color: white;
+				font-size: 20px;
+				padding: 10px;
+				font-weight: bold;
+			}
+			
+				
+			
+		</style>
+	</head>
+	<body>
+		<div id=cotainer>
+			<div id="world">
+				css3
+				<br />
+				<span style="font-size: 10px;">动画</span>
+			</div>
+		</div>
+	</body>
+</html>

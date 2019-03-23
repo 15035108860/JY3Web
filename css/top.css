@@ -1,0 +1,58 @@
+#top {
+	width: 100%;
+	height: 4%;
+	background-color: black;
+	display: flex;
+	justify-content: space-between;
+}
+#leftTop ul{
+	display: flex;
+	list-style: none;
+	margin-left: 5px;
+}
+#leftTop ul li{
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	margin-left: 5px;
+	border: 2px solid white;
+}
+.haveSign{
+	background-color: white;
+}
+#leftTop{
+	flex: 0.4;
+	display: flex;
+	align-items: center;
+}
+#centerTop{
+	flex: 0.3;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#rightTop{
+	flex: 0.3;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+#leftTop span{
+	margin-left: 19px;
+	font-size: 35px;
+	color: white;
+}
+#leftTop img{
+	height: 51px;
+	width: 108px;
+}
+#centerTop span{
+	font-size: 35px;
+}
+#rightTop img{
+	height: 51px;
+	width: 108px;
+	
+}

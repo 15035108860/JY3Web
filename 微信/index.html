@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>微信界面布局</title>
+		<link rel="stylesheet" href="../css/top.css" />
+		<style>
+			*{
+				margin: 0px;
+				padding: 0px;
+			}
+			#cotainer{
+				width: 100%;
+				height: 100%;
+				/*background-color: deepskyblue;*/
+				position: fixed;
+				display: flex;
+				flex-direction: column;
+			}
+
+			
+			#wtop{
+				width: 100%;
+				height: 8%;
+				background-color: #E0E0E0;
+				display: flex;
+				justify-content: flex-end;
+				align-items: center;
+				position: relative;
+			}
+			#top1{
+				height: 100%;
+				flex: 0.3;
+			}
+			#top2{
+				height: 100%;
+				flex: 0.4;
+			}
+			#top3{
+				height: 100%;
+				flex: 0.3;
+			}
+			#wcenter{
+				width: 100%;
+				height: 80%;
+				background-color: snow;
+				overflow: scroll;
+				/*display: flex;
+				flex-direction: column;
+				align-items: center;*/
+			}
+			#wbottom{
+				width: 100%;
+				height: 8%;
+				background-color: #E0E0E0;
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+			}
+			span{
+				font-size: 29px;
+			}
+			.bottom1{
+				text-align: center;		
+			}
+			
+			p{
+				font-size: 50px;
+				font-weight: 900;
+				position: absolute;
+				left: 46px;
+				top: 35px;
+			}
+			#image01{
+				position: absolute;
+				right: 21px;
+			}
+			#image02{
+				position: absolute;
+				right: -95px;
+			}
+			.wcenter01{
+				height: 14%;
+				width: 98%;
+				border-bottom: 1px solid #E0E0E0 ;				
+				margin-left: 10px;
+				display: flex;				
+			}
+			.wcenter01 img{				
+				width: 175px; 
+				height: 194px;
+			}
+			.centerSession{
+				height: 100%;
+				flex: 0.6;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				margin-left: 39px;
+			}
+			#centerWorld1{
+				
+				font-size: 47px;
+			}
+			#centerWorld2{
+				font-family: "宋体";
+				font-size: 39px;
+				color: #BDBDBD;
+			}
+			#miandaorao{
+				height: 79px;
+			}
+			.leftTouXiang{
+				height: 100%;
+				flex: 0.2;
+			}
+			.rightSet{
+				height: 100%;
+				flex: 0.2;
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-end;
+				align-items: center;
+			}
+			iframe{
+				width: 100%;
+				height: 100%;
+				border: 0px;
+			}
+			.dropmenu {
+			    display: none;
+			    position: absolute;
+			    background-color: #37474F;
+			    right: 119px;
+			    top: 82px;
+			    height: 600px;
+			    width: 306px;
+			}
+			.dropmenu a {
+			    color: white;
+			    padding: 28px 35px;
+			    text-decoration: none;
+			    display: block;
+			    font-size: 46px;
+			}
+
+			#image02:hover .dropmenu {
+			    display: block;
+			    
+			}
+		</style>
+	</head>
+	<body>
+		<div id="cotainer">
+			<div id="top">
+				<div id="leftTop">
+					<ul>
+						<li class="haveSign"></li>
+						<li class="haveSign"></li>
+						<li class="haveSign"></li>
+						<li class="haveSign"></li>
+						<li></li>
+					</ul>
+					<span>中国移动</span>
+					<img src="../img/wifi.svg" />
+				</div>
+				<div id="centerTop">
+					<span>18:21</span>
+				</div>
+				<div id="rightTop">
+					<img src="../img/屏幕锁定.svg" />
+					<span>80%</span>
+					<img src="../img/电池电量.svg" />
+				</div>
+			</div>
+			<div id="wtop">
+				<div class="top1" id="world01">
+					<p>微信(11)</p>
+				</div>
+				<div class="top1" id="image01">
+					<a href="#"><img src="../img/查找.svg" width="30%" height="30%"/></a>
+				</div>
+				<div class="top1" id="image02">
+					<a href="#"><img src="../img/添加.svg" width="30%" height="30%"/></a>
+					<div class="dropmenu">
+						<a href="#">发起群聊</a>
+						<a href="#">添加朋友</a>
+						<a href="#">扫一扫</a>
+						<a href="#">收付款</a>
+						<a href="#">帮助与反馈</a>
+					</div>
+				</div>
+			</div>
+			<div id="wcenter">
+				<iframe name="ifram1" src="weixin.html">
+					
+				</iframe>
+
+			</div>
+			<div id="wbottom">
+				<div class="bottom1">
+					<a href="weixin.html" target="ifram1"><img src="../img/WeChat.svg" width="45%" height="45%"/></a><br />
+					<span id="world01">微信</span>
+				</div>
+				<div class="bottom1">
+					<a href="tongxunlu.html" target="ifram1"><img src="../img/通讯录.svg" width="45%" height="45%"/></a><br />
+					<span>通讯录</span>
+				</div>
+				<div class="bottom1">
+					<a href="faxian.html" target="ifram1"><img src="../img/发现.svg" width="45%" height="45%"/></a><br />
+					<span>发现</span>
+				</div>
+				<div class="bottom1">
+					<a href="geren.html" target="ifram1"><img src="../img/我.svg" width="45%" height="45%"/></a><br />
+					<span>我</span>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

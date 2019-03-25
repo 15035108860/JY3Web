@@ -4,6 +4,7 @@
 		<meta charset="UTF-8">
 		<title>微信界面布局</title>
 		<link rel="stylesheet" href="../css/top.css" />
+		<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 		<style>
 			*{
 				margin: 0px;
@@ -32,22 +33,13 @@
 				height: 100%;
 				flex: 0.3;
 			}
-			#top2{
-				height: 100%;
-				flex: 0.4;
-			}
-			#top3{
-				height: 100%;
-				flex: 0.3;
-			}
+
 			#wcenter{
 				width: 100%;
 				height: 80%;
 				background-color: snow;
 				overflow: scroll;
-				/*display: flex;
-				flex-direction: column;
-				align-items: center;*/
+				
 			}
 			#wbottom{
 				width: 100%;
@@ -79,49 +71,7 @@
 				position: absolute;
 				right: -95px;
 			}
-			.wcenter01{
-				height: 14%;
-				width: 98%;
-				border-bottom: 1px solid #E0E0E0 ;				
-				margin-left: 10px;
-				display: flex;				
-			}
-			.wcenter01 img{				
-				width: 175px; 
-				height: 194px;
-			}
-			.centerSession{
-				height: 100%;
-				flex: 0.6;
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				margin-left: 39px;
-			}
-			#centerWorld1{
-				
-				font-size: 47px;
-			}
-			#centerWorld2{
-				font-family: "宋体";
-				font-size: 39px;
-				color: #BDBDBD;
-			}
-			#miandaorao{
-				height: 79px;
-			}
-			.leftTouXiang{
-				height: 100%;
-				flex: 0.2;
-			}
-			.rightSet{
-				height: 100%;
-				flex: 0.2;
-				display: flex;
-				flex-direction: column;
-				justify-content: flex-end;
-				align-items: center;
-			}
+			
 			iframe{
 				width: 100%;
 				height: 100%;
@@ -145,9 +95,10 @@
 			}
 
 			#image02:hover .dropmenu {
-			    display: block;
-			    
+			    display: block;			    
 			}
+			
+
 		</style>
 	</head>
 	<body>
@@ -198,23 +149,68 @@
 
 			</div>
 			<div id="wbottom">
-				<div class="bottom1">
-					<a href="weixin.html" target="ifram1"><img src="../img/WeChat.svg" width="45%" height="45%"/></a><br />
+				<div class="bottom1" >
+					<a href="weixin.html" target="ifram1"  id="dianJiWeixin">
+						<img  id="subBianse1" src="../img/WeChat.svg" width="70px" height="70px"/>
+					</a><br />
 					<span id="world01">微信</span>
 				</div>
 				<div class="bottom1">
-					<a href="tongxunlu.html" target="ifram1"><img src="../img/通讯录.svg" width="45%" height="45%"/></a><br />
+					<a href="tongxunlu.html" target="ifram1"><img  id="subBianse2" src="../img/通讯录.svg" width="70px" height="70px"/></a><br />
 					<span>通讯录</span>
 				</div>
 				<div class="bottom1">
-					<a href="faxian.html" target="ifram1"><img src="../img/发现.svg" width="45%" height="45%"/></a><br />
+					<a href="faxian.html" target="ifram1"><img  id="subBianse3" src="../img/发现.svg" width="70px" height="70px"/></a><br />
 					<span>发现</span>
 				</div>
 				<div class="bottom1">
-					<a href="geren.html" target="ifram1"><img src="../img/我.svg" width="45%" height="45%"/></a><br />
+					<a href="geren.html" target="ifram1"><img  id="subBianse4" src="../img/我.svg" width="70px" height="70px"/></a><br />
 					<span>我</span>
 				</div>
 			</div>
 		</div>
 	</body>
+	<script>
+		$(function(){
+			var toggle = true;
+			$("#subBianse1").click(function(){
+				if(toggle){
+					$(this).attr("src", "../img/选中微信.svg")
+					toggle = false;
+				}else{
+					$(this).attr("src", "../img/WeChat.svg")
+					toggle = true;
+				}				
+			})
+			$("#subBianse2").click(function(){
+				if(toggle){
+					$(this).attr("src", "../img/选中通讯录.svg")
+					toggle = false;
+				}else{
+					$(this).attr("src", "../img/通讯录.svg")
+					toggle = true;
+				}				
+			})
+			$("#subBianse3").click(function(){
+				if(toggle){
+					$(this).attr("src", "../img/选中发现.svg")
+					toggle = false;
+				}else{
+					$(this).attr("src", "../img/发现.svg")
+					toggle = true;
+				}				
+			})
+			$("#subBianse4").click(function(){
+				if(toggle){
+					$(this).attr("src", "../img/选中我.svg")
+					toggle = false;
+				}else{
+					$(this).attr("src", "../img/我.svg")
+					toggle = true;
+				}				
+			})
+			
+			
+		})
+	</script>
 </html>

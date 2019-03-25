@@ -3,7 +3,195 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>朋友圈</title>
+		<link rel="stylesheet" href="../css/top.css" />
+		<style>
+			*{
+				margin: 0px;
+				padding: 0px;
+			}
+			#cotainer{
+				width: 100%;
+				height: 100%;
+				position: fixed;
+				/*background-color: antiquewhite;*/
+				display: flex;
+				flex-direction: column;
+				overflow: scroll;
+			}
+			#pyqTop{
+				width: 100%;
+				height: 36%;
+				border-bottom: 1px solid black;
+			}
+			#pyqTop img{
+				height: 100%;
+				width: 100%;
+				
+			}
+			#pyqCenter{
+				width: 100%;
+				height: 60%;
+
+				overflow: scroll;
+			}
+			.subPyqCenter{
+				width: 100%;
+				height: 33%;
+				border-bottom: 1px solid #E0E0E0;
+				display: flex;
+				align-items: center;
+			}
+			.subPyqCenter div{
+				height: 80%;
+				display: flex;
+				align-items: center;
+				flex-direction: column;
+				justify-content: flex-start;
+				align-items: flex-start;
+				margin-left: 18px;
+				margin-right: 10px;
+			}
+			.name1{
+				font-size: 60px;
+				color: #0D47A1;
+			}
+			.name2{
+				font-size: 36px;
+				color: black;
+			}
+			.subPyqCenter img{
+				height: 80%;
+				width: 22%;
+				margin-left: 21px;
+			}
+			#floatTouxiang{
+				position:absolute;
+				width: 229px;
+				height: 229px;
+				/*background-color: aquamarine;*/
+				right: 30px;
+				top: 556px;
+			}
+			#floatTouxiang img{
+				height: 100%;
+				width: 100%;
+			}
+			#lastWorld{
+				position: absolute;
+				color: white;
+				font-size: 52px;
+				right: 274px;
+				top: 623px;
+				
+			}
+			#dongzuo{
+				width: 100%;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: flex-end;
+				margin-left: 0px;
+				margin-bottom: -12px;
+			}
+			.information p{
+				color: #E0E0E0;
+				font-size: 38px;
+			}
+		</style>
 	</head>
 	<body>
+		<div id="cotainer">
+			<div id="top">
+				<div id="leftTop">
+					<ul>
+						<li class="haveSign"></li>
+						<li class="haveSign"></li>
+						<li class="haveSign"></li>
+						<li class="haveSign"></li>
+						<li></li>
+					</ul>
+					<span>中国移动</span>
+					<img src="../img/wifi.svg" />
+				</div>
+				<div id="centerTop">
+					<span>18:21</span>
+				</div>
+				<div id="rightTop">
+					<img src="../img/屏幕锁定.svg" />
+					<span>80%</span>
+					<img src="../img/电池电量.svg" />
+				</div>
+			</div>
+			<div id="pyqTop">
+				<a href="index.html"><img src="../img/背景.jpg" /></a>
+			</div>
+			<div id="pyqCenter">
+				<div class="subPyqCenter">
+					<img src="../img/person9.jpg" />
+					<div class="information">
+						<span class="name1">老马</span>
+						<span class="name2">今天跟老弟谈了一件生意,我就说给他十个亿.他不知道咋啦,就特别开心.
+							十个亿很多吗?我咋不这么觉得</span>
+						<div id="dongzuo">
+							<p>14分钟前</p>
+							<img src="../img/评论.svg" />
+						</div>
+					</div>
+					
+				</div>			
+				<div class="subPyqCenter">
+					<img src="../img/person10.jpg" />
+					<div class="information">
+						<span class="name1">小马</span>
+						<span class="name2">今天跟老弟谈了一件生意,我就说给他十个亿.他不知道咋啦,就特别开心.
+							十个亿很多吗?我咋不这么觉得</span>
+						<div id="dongzuo">
+							<p>14分钟前</p>
+							<img src="../img/评论.svg" />
+						</div>
+					</div>
+				</div>			
+				<div class="subPyqCenter">
+					<img src="../img/person2.jpg" />
+					<div class="information">
+						<span class="name1">仙女</span>
+						<span class="name2">今天跟老弟谈了一件生意,我就说给他十个亿.他不知道咋啦,就特别开心.
+							十个亿很多吗?我咋不这么觉得</span>
+						<div id="dongzuo">
+							<p>14分钟前</p>
+							<img src="../img/评论.svg" />
+						</div>
+					</div>
+				</div>				
+				<div class="subPyqCenter">
+					<img src="../img/person1.jpg" />
+					<div class="information">
+						<span class="name1">小仙女</span>
+						<span class="name2">今天跟老弟谈了一件生意,我就说给他十个亿.他不知道咋啦,就特别开心.
+							十个亿很多吗?我咋不这么觉得</span>
+						<div id="dongzuo">
+							<p>14分钟前</p>
+							<img src="../img/评论.svg" />
+						</div>
+					</div>
+				</div>				
+				<div class="subPyqCenter">
+					<img src="../img/person7.jpg" />
+					<div class="information">
+						<span class="name1">暮雪</span>
+						<span class="name2">今天跟老弟谈了一件生意,我就说给他十个亿.他不知道咋啦,就特别开心.
+							十个亿很多吗?我咋不这么觉得</span>
+						<div id="dongzuo">
+							<p>14分钟前</p>
+							<img src="../img/评论.svg" />
+						</div>
+					</div>
+				</div>				
+			</div>
+			<div id="floatTouxiang">
+				<img src="../img/微信头像.jpg"/>
+			</div>
+			<span id="lastWorld">啊哈哈哈哈</span>
+		</div>
 	</body>
 </html>

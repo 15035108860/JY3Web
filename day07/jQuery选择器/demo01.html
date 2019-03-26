@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>答案提示</title>
+		<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+		<style>
+			.world{
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<button id="btn">点击提示答案</button>
+		<h2>知否,知否?</h2>
+		<p class="world">昨夜雨疏风骤,浓睡不消残酒.试问卷帘人却道海棠依旧</p><br />
+		<p class="world">知否,知否?因是绿肥红瘦.</p>
+		<script>
+			$(function(){
+				//方法1
+//				$("p").hide();
+//				$("#btn").click(function(){
+//					$("p").toggle();
+//				});
+				alert("hello Jquery");
+				//方法2(收不回来)
+				$("#btn").click(function(){
+					$(".world").css("display","block")
+				})
+			})
+		</script>
+	</body>
+</html>

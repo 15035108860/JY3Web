@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>常用语法练习</title>
+		<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="../css/lianxi.css" />
+	</head>
+	<body>
+		<div id="container">
+			<span>陌上花一开</span>
+		</div>
+		
+		<div >
+			
+		</div>
+		<script>
+			$(function(){
+				//为元素设置css样式
+//				$("#container").css("width","500px");
+//				$("#container").css("height","500px");
+//				$("#container").css("background-color","red");
+
+				//.css的连写
+				$("#container").css({
+					"height":"300px",
+					"width":"300px",
+					"background-color":"blue"
+				});
+				
+				//为元素添加类样式
+				$("#container").addClass("div1");
+				
+				//获得元素后面紧邻的同辈元素
+				$("#container").next().css({
+					"height":"300px",
+					"width":"300px",
+					"background-color":"red"
+				});
+				
+				//取得第一个匹配元素的html内容
+				
+//				alert($("#container").html());
+			})
+		</script>
+	</body>
+</html>

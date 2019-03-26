@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>选择器的练习</title>
+		<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+		
+	</head>
+	<body>
+		<!--//匹配文档中ID值div1的元素-->
+		<div id="div1">
+			<span>我的id是1</span>
+		</div>
+		<div id="div2">
+			<span>我的id是2</span>
+		</div>
+		<div id="div3">
+			<span>我的id是3</span>
+		</div>
+		<div id="div4">
+			<span>我的id是4</span>
+		</div>
+		
+		<script>
+			$(function(){
+				//选择id为1的div设置背景色
+				$("#div1").css({
+					"width":"200px",
+					"height":"200px",
+					"background-color":"red"
+				});
+				
+				//匹配文档中的所有div设置字体颜色
+				$("div").css("color","blue");
+			})
+		</script>
+	</body>
+</html>

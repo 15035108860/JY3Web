@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JQuery综合练习</title>
+		<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+		<style>
+
+		</style>
+	</head>
+	<body>
+			<h2>成绩单</h2>
+			<table id="t1">
+				<thead>
+					<td>学号</td>
+					<td>姓名</td>
+					<td>语文</td>
+					<td>英语</td>
+				</thead>
+						
+				
+				<tr>
+					<td>1</td>
+					<td>2</td>
+					<td>3</td>
+					<td>4</td>	
+				</tr>
+				<tr>
+					<td>5</td>
+					<td>6</td>
+					<td>7</td>
+					<td>8</td>	
+				</tr>
+				<tr>
+					<td>9</td>
+					<td>8</td>
+					<td>7</td>
+					<td>6</td>	
+				</tr>
+				<tr>
+					<td>5</td>
+					<td>4</td>
+					<td>3</td>
+					<td>2</td>	
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>2</td>
+					<td>3</td>
+					<td>4</td>	
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>5</td>
+					<td>9</td>
+					<td>7</td>	
+				</tr>
+				<tr>
+					<td>6</td>
+					<td>4</td>
+					<td>6</td>
+					<td>8</td>	
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>	
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>	
+				</tr>
+				<tr>
+					<td>9</td>
+					<td>5</td>
+					<td>4</td>
+					<td>6</td>	
+				</tr>
+			</table>
+
+		<script>
+			$(function(){
+				$("thead").css({
+					"color":"red",
+					"font-size":"20px"
+				});
+				$("tr:last").css("color","blue");
+				$("tr:even").css("background-color","#ffd");
+				$("tr:odd").css("background-color","#ddf");
+				$("tr:lt(4)").css("font-size","12px");
+				$("tr:gt(4)").css("font-size","10px");
+				$("h2").css("font-size","30px")
+			})
+		</script>
+	</body>
+</html>

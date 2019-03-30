@@ -1,5 +1,5 @@
 $(function(){
-	$("#head").append("<img src='../img/头像.png'  class='img'/>");
+	$("#head").append("<img src='http://pp4456viu.bkt.clouddn.com/%E5%A4%B4%E5%83%8F.png'  class='img'/>");
 	$("#message").append("<div id='userName'></div>"+
 				"<div id='password'></div>"+
 				"<div id='prompt'></div>");
@@ -14,6 +14,6 @@ $(function(){
 	$("#prompt").addClass("prompt");
 	
 	$("#login div").addClass("login");
-	$("#login div").html("<a href='#' class='a1'><span class='span2'>登&nbsp;录</span></a>");
+	$("#login div").html("<a href='index.html' class='a1'><span class='span2'>登&nbsp;录</span></a>");
 	
 })

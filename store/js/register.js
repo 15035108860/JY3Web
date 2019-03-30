@@ -1,5 +1,5 @@
 $(function(){
-	$("#top").append("<img src='../img/logo.png' class='img'/> " );
+	$("#top").append("<img src='http://pp4456viu.bkt.clouddn.com/logo.png' class='img'/> " );
 	$("#message").append("<div id='userName'></div>"+
 				"<div id='password'></div>"+
 				"<div id='rpassword'></div>"+
@@ -20,6 +20,6 @@ $(function(){
 	$("#yanzhengma").append("<span class='span1'>请输入验证码</span>");
 	
 	$("#prompt div").addClass("prompt");
-	$("#login").html("<a href='#' class='a1'><span class='span2'>登&nbsp;录</span></a>");
+	$("#login").html("<a href='login.html' class='a1'><span class='span2'>登&nbsp;录</span></a>");
 	$("#register").html("<a href='#' class='a1'><span class='span2'>注&nbsp;册</span></a>");
 })
